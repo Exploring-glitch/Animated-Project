@@ -3,7 +3,7 @@ import { rootRoute } from "./routeTree"
 import AgencePage from "../pages/AgencePage";
 
 
-export const authRoute = createRoute({
+export const agenceRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/agence',
     component: AgencePage,

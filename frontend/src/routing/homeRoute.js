@@ -3,8 +3,8 @@ import { rootRoute } from "./routeTree"
 import HomePage from "../pages/HomePage";
 
 
-export const authRoute = createRoute({
+export const homeRoute = createRoute({
     getParentRoute: () => rootRoute,
-    path: '/home',
+    path: '/',
     component: HomePage,
 })
