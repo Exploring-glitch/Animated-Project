@@ -1,9 +1,12 @@
+import { useRef } from "react"
 
 const AgencePage = () => {
+  const imgDivRef = useRef(null);
+
   return (
     <div>
       <div className="section1">
-        <div className="absolute h-[22vw] w-[16vw] rounded-full overflow-hidden left-[28vw] bottom-58"> {/*first give w and h to parent as you like*/}
+        <div ref={imgDivRef} className="absolute h-[22vw] w-[16vw] rounded-full overflow-hidden left-[28vw] bottom-58"> {/*first give w and h to parent as you like*/}
           <img className="h-full w-full object-cover" src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" /> {/*then make the child h and w full to parent*/}
         </div>
 
@@ -21,7 +24,7 @@ const AgencePage = () => {
             </div>
           </div>
 
-          <div className="font-[font2] mt-40 flex gap-20 w-[90vw] ml-45">
+          <div className="font-[font2] mt-40 flex gap-20 w-[75vw] ml-[10.5vw]">
             <p className="w-1/4">Nos projets_ naissent dans l’humilité, grandissent dans la curiosité et vivent grâce à la créativité sous toutes ses formes.</p>
             <p className="w-1/4">Notre création_ bouillonne dans un environnement où le talent a le goût d’exploser. Où on se sent libre d’être la meilleure version de soi-même.</p>
             <p className="w-1/4">Notre culture_ c’est l’ouverture aux autres. Point. Tout l’équipage participe à bâtir une agence dont on est fiers.</p>
