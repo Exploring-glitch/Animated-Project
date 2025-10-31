@@ -6,6 +6,11 @@
 }
 
 @font-face {
-    font-family: font1;
+    font-family: font2;
     src: url(/fonts/Lausanne-500.woff2);
+}
+
+@font-face {
+    font-family: font3;
+    src: url(/fonts/Poppins-Regular.ttf);
 }

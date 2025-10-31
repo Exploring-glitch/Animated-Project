@@ -7,7 +7,7 @@ const HomeTopText = () => {
 
       <div className='text-[9.5vw] leading-[8.5vw] flex items-start justify-center mt-1' >
         qui
-        <div className='h-[6.5vw] w-[14vw] mt-1 '>
+        <div className='h-[6.5vw] w-[15vw] mt-1 '>
           <Video />
         </div>
         génère
