@@ -3,11 +3,12 @@ import { useLocation } from '@tanstack/react-router';
 import gsap from 'gsap'
 import { useRef } from 'react'
 
-const Stairs = () => {
+const Stairs = ({children}) => {
+    console.log(children)
     const currentPath = useLocation().pathname
     
-    
     const stairRef = useRef(null);
+    const pageRef = useRef(null);
 
     useGSAP(function () {
         const tl = gsap.timeline();
@@ -38,6 +39,10 @@ const Stairs = () => {
             y: '0%',
         })
 
+        gsap.from(pageRef.current, {
+            opacity: 0,
+            delay: 1
+        })
     }, [currentPath])
 
     return (
@@ -48,6 +53,10 @@ const Stairs = () => {
                 <div className='stair h-full w-1/5 bg-black'></div>
                 <div className='stair h-full w-1/5 bg-black'></div>
                 <div className='stair h-full w-1/5 bg-black'></div>
+            </div>
+        
+            <div ref={pageRef}>
+                {children} 
             </div>
         </div>
     )

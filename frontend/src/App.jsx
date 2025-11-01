@@ -5,8 +5,9 @@ const App = () => {
 
   return (
     <>
-      <Stairs />
-      <Outlet />
+      <Stairs>
+        <Outlet />
+      </Stairs>
     </>
   )
 }

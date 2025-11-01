@@ -20,6 +20,10 @@ const AgencePage = () => {
     'https://k72.ca/images/teamMembers/MEL_480X640.jpg?w=480&h=640&fit=crop&s=07c9bfee89816720b873e6748a276af6',
     'https://k72.ca/images/teamMembers/CAMILLE_480X640_2.jpg?w=480&h=640&fit=crop&s=74317575b2d72fd11c5296615c383e4a',
     'https://k72.ca/images/teamMembers/MEGGIE_480X640_2.jpg?w=480&h=640&fit=crop&s=3604b19f8fc7b40f517954147698d847',
+    'https://k72.ca/images/teamMembers/joel_480X640_3.jpg?w=480&h=640&fit=crop&s=1cadbf143b3aa916b1b414464acbb4d6',
+    'https://k72.ca/images/teamMembers/Olivier_480x640.jpg?w=480&h=640&fit=crop&s=c13569c0753117d04f1a93cf7b446d64',
+    'https://k72.ca/images/teamMembers/Lawrence_480x640.jpg?w=480&h=640&fit=crop&s=0a878205586092164001a9afe0ef4007',
+    'https://k72.ca/images/teamMembers/MEGGIE_480X640_2.jpg?w=480&h=640&fit=crop&s=3604b19f8fc7b40f517954147698d847',
     'https://k72.ca/images/teamMembers/joel_480X640_3.jpg?w=480&h=640&fit=crop&s=1cadbf143b3aa916b1b414464acbb4d6'
   ] 
 
@@ -31,14 +35,14 @@ const AgencePage = () => {
         start: 'top 23%',
         end: 'top -120%',
         pin:true,
-        scrub: 1,
+
         
         onUpdate: function(e){
           
           let imgIndex;
 
           if(e.progress<1){ //progress starts from 0 and ends at 1 
-            imgIndex = Math.round(e.progress * imageArray.length) //when less than 1 do this.
+            imgIndex = Math.floor(e.progress * imageArray.length) //when less than 1 do this.
           } else{
             imgIndex = imageArray.length-1 //when 1 do this.
           }
@@ -76,10 +80,10 @@ const AgencePage = () => {
             <p className="w-1/2">Our Culture_ We’re open to each other. Period. The team works together to create a space that makes us proud.</p>
           </div>
         </div>
-      </div>
-      <div className="section2 h-screen">
 
       </div>
+
+      <div className="section2 h-screen"></div>
     </div>
   )
 }
