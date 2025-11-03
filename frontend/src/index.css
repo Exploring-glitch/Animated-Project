@@ -14,3 +14,28 @@
     font-family: font3;
     src: url(/fonts/Poppins-Regular.ttf);
 }
+
+.moveX {
+    animation-name: moveAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes moveAnimation {
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.move_link {
+    opacity: 0;
+}
+
+.link:hover .move_link {
+    opacity: 1;
+}
