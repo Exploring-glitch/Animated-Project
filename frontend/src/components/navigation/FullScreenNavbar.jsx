@@ -1,13 +1,58 @@
-import React from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { useRef } from 'react';
+
+
+
 
 const mainNavbar = () => {
+  const fullNavRef = useRef(null);
+
+
+  useGSAP(function () {
+    const tl = gsap.timeline();
+
+    tl.from('.stairAnimate', { //on load: coming animation
+      height: 0,
+      stagger: {
+        amount: -0.25
+      }
+    })
+
+    tl.from(fullNavRef.current, {
+      opacity: 0
+    })
+    
+    tl.from('.link', {
+      opacity:0,
+      rotateX: 90,
+      stagger: {
+        amount: 0.25
+      }
+    })
+
+    {/*tl.to('.stairAnimate', { //on load: going animation
+      y: '100%',
+      stagger: {
+        amount: -0.25
+      }
+    })*/}
+  })
+
+
   return (
     <div className='h-screen w-screen bg-black text-white overflow-hidden p-2 font-[font2]'>
-      <div>
-
+      <div className='h-screen w-screen fixed'>
+        <div className='h-full w-full flex'>
+          <div className='stairAnimate h-full w-1/5 bg-red-950'></div>
+          <div className='stairAnimate h-full w-1/5 bg-red-950'></div>
+          <div className='stairAnimate h-full w-1/5 bg-red-950'></div>
+          <div className='stairAnimate h-full w-1/5 bg-red-950'></div>
+          <div className='stairAnimate h-full w-1/5 bg-red-950'></div>
+        </div>
       </div>
-      
-      <div>
+
+      <div ref={fullNavRef} className='relative'>
         <div className='flex justify-between'>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="115" height="50" viewBox="0 0 103 44" fill='white'>
