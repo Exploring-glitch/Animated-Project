@@ -5,7 +5,7 @@ const mainNavbar = () => {
     <div className='h-screen w-screen bg-black text-white py-37 font-[font2]'>
       
       <div className='link relative border-t-[0.1vw] text-center'>
-        <h1 className='uppercase text-8xl p-2'>Projects</h1>
+        <h1 className='uppercase text-[7vw] leading-0 p-12 pt-14.5'>Projects</h1>
 
         <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
           <div className='moveX flex items-center pt-2'>
@@ -26,7 +26,7 @@ const mainNavbar = () => {
       </div>
 
       <div className='link relative border-t-[0.1vw] text-center '>
-        <h1 className='uppercase text-8xl p-2'>Agence</h1>
+        <h1 className='uppercase text-[7vw] leading-0 p-12 pt-14.5'>Agence</h1>
 
         <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
           <div className='moveX flex items-center pt-2'>
@@ -47,7 +47,7 @@ const mainNavbar = () => {
       </div>
 
       <div className='link relative border-t-[0.1vw] text-center '>
-        <h1 className='uppercase text-8xl p-2'>Contact</h1>
+        <h1 className='uppercase text-[7vw] leading-0 p-12 pt-14.5'>Contact</h1>
 
         <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
           <div className='moveX flex items-center pt-2'>
@@ -68,7 +68,7 @@ const mainNavbar = () => {
       </div>
 
       <div className='link relative border-y-[0.1vw] text-center '>
-        <h1 className='uppercase text-8xl p-2'>Blogue</h1>
+        <h1 className='uppercase text-[7vw] leading-0 p-12 pt-14.5'>Blogue</h1>
 
         <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
           <div className='moveX flex items-center pt-2'>
