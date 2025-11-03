@@ -41,7 +41,7 @@ const mainNavbar = () => {
 
 
   return (
-    <div className='h-screen w-screen bg-black text-white overflow-hidden p-2 font-[font2]'>
+    <div className='hidden h-screen w-screen bg-black text-white overflow-hidden p-2 font-[font2]'>
       <div className='h-screen w-screen fixed'>
         <div className='h-full w-full flex'>
           <div className='stairAnimate h-full w-1/5 bg-red-950'></div>

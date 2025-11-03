@@ -7,7 +7,10 @@ const App = () => {
 
   return (
     <>
+      <Stairs />
+      <Navbar />
       <FullScreenNavbar />
+      <Outlet />
     </>
   )
 }
