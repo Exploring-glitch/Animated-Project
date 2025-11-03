@@ -34,6 +34,7 @@
 
 .move_link {
     opacity: 0;
+    transition: all ease 0.1s;
 }
 
 .link:hover .move_link {
