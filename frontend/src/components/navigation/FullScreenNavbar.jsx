@@ -10,14 +10,16 @@ const FullScreenNav = () => {
   const fullScreenRef = useRef(null);
   const [navOpen, setNavOpen] = useContext(NavContext);
 
+
+
   function gsapAnimation() {
     const tl = gsap.timeline();
 
-    tl.from('.stairAnimate', { //on load: coming animation
+    tl.from('.stairAnimate', { 
       delay: 0.5,
       height: 0,
       stagger: {
-        amount: -0.2
+        amount: -0.3
       }
     })
 
@@ -30,32 +32,34 @@ const FullScreenNav = () => {
     })
 
     tl.from('.navbarTopLink', {
-      opacity: 1
+      opacity: 0
     })
   }
+
+
   useGSAP(function () {
     if (navOpen) {
       gsap.to(fullScreenRef.current, {
-        dispaly: 'block'
+        display: 'block'
       })
       gsapAnimation()
     } else {
       gsap.to(fullScreenRef.current, {
-        dispaly: 'none'
+        display: 'none'
       })
     }
   }, [navOpen])
 
 
   return (
-    <div ref={fullScreenRef} className='hidden h-screen w-screen bg-black text-white overflow-hidden p-2 font-[font2] z-50'>
+    <div ref={fullScreenRef} className='hidden h-screen w-screen bg-black text-white overflow-hidden p-2 font-[font2] z-50 fixed'>
       <div className='h-screen w-screen fixed'>
         <div className='h-full w-full flex'>
-          <div className='stairAnimate h-full w-1/5 bg-red-950'></div>
-          <div className='stairAnimate h-full w-1/5 bg-red-950'></div>
-          <div className='stairAnimate h-full w-1/5 bg-red-950'></div>
-          <div className='stairAnimate h-full w-1/5 bg-red-950'></div>
-          <div className='stairAnimate h-full w-1/5 bg-red-950'></div>
+          <div className='stairAnimate h-full w-1/5 bg-black'></div>
+          <div className='stairAnimate h-full w-1/5 bg-black'></div>
+          <div className='stairAnimate h-full w-1/5 bg-black'></div>
+          <div className='stairAnimate h-full w-1/5 bg-black'></div>
+          <div className='stairAnimate h-full w-1/5 bg-black'></div>
         </div>
       </div>
 

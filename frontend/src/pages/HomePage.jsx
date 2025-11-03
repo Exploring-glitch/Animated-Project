@@ -14,8 +14,6 @@ const HomePage = () => {
         <HomeMidText />
         <HomeBottomText />
       </div>
-
-
     </div>
   )
 }
