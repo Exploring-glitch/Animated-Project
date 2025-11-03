@@ -1,8 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
+import { NavContext } from '../context/NavContext';
 
 const Navbar = () => {
     const navGreenRef = useRef(null);
-    const [ linesHover, setLineshover] = useState(false);
+    const [linesHover, setLineshover] = useState(false);
+    const [navOpen, setNavOpen] = useContext(NavContext);
+
 
     return (
         <div className='fixed top-0 z-4 w-full flex justify-between items-start'>
@@ -13,13 +16,14 @@ const Navbar = () => {
             </div>
 
             <div
-                onMouseEnter={() => { navGreenRef.current.style.height = '100%' ; setLineshover(true); }}
-                onMouseLeave={() => { navGreenRef.current.style.height = '0%' ; setLineshover(false); }}
+                onClick={() => {setNavOpen(true)}}
+                onMouseEnter={() => { navGreenRef.current.style.height = '100%'; setLineshover(true); }}
+                onMouseLeave={() => { navGreenRef.current.style.height = '0%'; setLineshover(false); }}
                 className='bg-black cursor-pointer h-12 w-55 relative' //parent div
-                >
-                <div className={`px-[9vw] relative z-1 ${ linesHover ? "text-black" : "text-white" }`}>
-                    <h1 className='font-extrabold'>________</h1>
-                    <h1 className='font-extrabold -mt-4 mx-[1.6vw]'>____</h1>
+            >
+                <div className={`flex flex-col justify-center items-end pr-6 relative z-1 ${linesHover ? "text-black" : "text-white"}`}>
+                    <h1 className='font-extrabold'>_______</h1>
+                    <h1 className='font-extrabold -mt-4.5'>____</h1>
                 </div>
 
                 <div ref={navGreenRef} className='bg-[#CCFF00] w-full h-0 top-0 absolute transition-all duration-300'></div>

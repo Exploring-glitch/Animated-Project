@@ -1,13 +1,11 @@
-
 import { createContext, useState } from 'react';
-
 export const NavContext = createContext();
 
 export const NavProvider = ({ children }) => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <NavContext.Provider value={{ isNavOpen, setIsNavOpen }}>
+    <NavContext.Provider value={[ navOpen, setNavOpen ]}> {/*we are passing these two as values*/}
       {children}
     </NavContext.Provider>
   );

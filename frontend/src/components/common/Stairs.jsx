@@ -3,6 +3,7 @@ import { useLocation } from '@tanstack/react-router';
 import gsap from 'gsap'
 import { useRef } from 'react'
 
+
 const Stairs = () => {
     const currentPath = useLocation().pathname
     
