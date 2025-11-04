@@ -6,53 +6,77 @@ import { NavContext } from '../context/NavContext';
 
 
 const FullScreenNav = () => {
-  const fullNavRef = useRef(null);
-  const fullScreenRef = useRef(null);
+
   const [navOpen, setNavOpen] = useContext(NavContext);
 
 
 
   function gsapAnimation() {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline()
+    
+    tl.to('.fullScreenRef', {
+      display: 'block'
+    })
 
-    tl.from('.stairAnimate', { 
-      delay: 0.5,
-      height: 0,
+    tl.to('.stairAnimate', {
+      delay: 0.2,
+      height: '100%',
       stagger: {
         amount: -0.3
       }
     })
 
-    tl.from('.link', {
-      opacity: 0,
-      rotateX: 90,
+    tl.to('.link', {
+      opacity: 1,
+      rotateX: 0,
       stagger: {
-        amount: 0.2
+        amount: 0.3
       }
     })
 
-    tl.from('.navbarTopLink', {
-      opacity: 0
+    tl.to('.navbarTopLink', {
+      opacity: 1
     })
   }
 
+  function gsapAnimationReverse() {
+    
+    const tl = gsap.timeline()
+    tl.to('.link', {
+      opacity: 0,
+      rotateX: 90,
+      stagger: {
+        amount: 0.1
+      }
+    })
+
+    tl.to('.stairAnimate', {
+      height: 0,
+      stagger: {
+        amount: 0.1
+      }
+    })
+
+    tl.to('.navbarTopLink', {
+      opacity: 0
+    })
+
+    tl.to('.fullScreenRef', {
+      display: 'none',
+    })
+  }
 
   useGSAP(function () {
     if (navOpen) {
-      gsap.to(fullScreenRef.current, {
-        display: 'block'
-      })
       gsapAnimation()
     } else {
-      gsap.to(fullScreenRef.current, {
-        display: 'none'
-      })
+      gsapAnimationReverse()
     }
   }, [navOpen])
 
 
   return (
-    <div ref={fullScreenRef} className='hidden h-screen w-screen bg-black text-white overflow-hidden p-2 font-[font2] z-50 fixed'>
+    <div className='fullScreenRef hidden h-screen w-screen text-white overflow-hidden font-[font2] z-50 fixed'>
       <div className='h-screen w-screen fixed'>
         <div className='h-full w-full flex'>
           <div className='stairAnimate h-full w-1/5 bg-black'></div>
@@ -63,7 +87,7 @@ const FullScreenNav = () => {
         </div>
       </div>
 
-      <div ref={fullNavRef} className='relative'>
+      <div className='relative p-2'>
         <div className='navbarTopLink flex justify-between'>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="115" height="50" viewBox="0 0 103 44" fill='white'>
