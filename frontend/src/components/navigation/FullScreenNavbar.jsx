@@ -6,9 +6,7 @@ import { NavContext } from '../context/NavContext';
 
 
 const FullScreenNav = () => {
-
   const [navOpen, setNavOpen] = useContext(NavContext);
-
 
 
   function gsapAnimation() {
@@ -128,17 +126,17 @@ const FullScreenNav = () => {
 
             <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
               <div className='moveX flex items-center pt-2'>
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>To Know Everything</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt=""></img>
 
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>To Know Everything</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt=""></img>
               </div>
               <div className='moveX flex items-center  pt-2'>
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>To Know Everything</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt=""></img>
 
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>To Know Everything</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt=""></img>
               </div>
             </div>
@@ -149,17 +147,17 @@ const FullScreenNav = () => {
 
             <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
               <div className='moveX flex items-center pt-2'>
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>To Send a Fax</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt=""></img>
 
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>To Send a Fax</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt=""></img>
               </div>
               <div className='moveX flex items-center  pt-2'>
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>To Send a Fax</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt=""></img>
 
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>To Send a Fax</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt=""></img>
               </div>
             </div>
@@ -170,17 +168,17 @@ const FullScreenNav = () => {
 
             <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
               <div className='moveX flex items-center pt-2'>
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>Read The Articles</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt=""></img>
 
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>Read The Articles</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt=""></img>
               </div>
               <div className='moveX flex items-center  pt-2'>
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>Read The Articles</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg" alt=""></img>
 
-                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>See the projects</h2>
+                <h2 className='uppercase text-8xl text-center text whitespace-nowrap'>Read The Articles</h2>
                 <img className='shrink-0 w-50 h-18 mb-3 ml-5 mr-5 object-cover rounded-full' src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg" alt=""></img>
               </div>
             </div>
