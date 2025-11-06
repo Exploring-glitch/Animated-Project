@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap";
 import ProjectCard from '../components/projects/ProjectCard'
 import { ScrollTrigger } from "gsap/all";
-import ProjectFooter from "../components/projects/ProjectFooter";
+import Footer from "../components/common/Footer";
 
 
 const ProjectsPage = () => {
@@ -63,7 +63,7 @@ const ProjectsPage = () => {
         ))}
       </div>
 
-      <ProjectFooter />
+      <Footer />
     </div>
   );
 };

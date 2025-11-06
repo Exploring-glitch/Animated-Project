@@ -2,6 +2,8 @@ import { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import Footer from "../components/common/Footer";
+
 
 const AgencePage = () => {
   gsap.registerPlugin(ScrollTrigger)
@@ -81,9 +83,8 @@ const AgencePage = () => {
           </div>
         </div>
 
+        <Footer />
       </div>
-
-      <div className="section2 h-screen"></div>
     </div>
   )
 }
