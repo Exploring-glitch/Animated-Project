@@ -19,9 +19,15 @@ const ProjectsPage = () => {
     }, {
       img1: 'https://k72.ca/images/caseStudies/FRUITE/Fruite_thumbnail_bbq.jpg?w=1280&h=960&s=953c1f702bec28d66d07e95bc1261821',
       img2: 'https://k72.ca/images/caseStudies/PME-MTL/PME-MTL_Thumbnail.jpg?w=1280&h=960&s=49e3b251d0a28f1f8d40fd59517fc000'
-    }, {
+    },{
       img1: 'https://k72.ca/images/caseStudies/OKA/OKA_thumbnail.jpg?w=1280&h=960&s=c12c27c9db3c521e4c82a246a8d5c022',
       img2: 'https://k72.ca/images/caseStudies/CRISIS24/crisis24_behance_1920X1200_cartes.jpg?w=1280&h=960&s=bb42c9de87442e1bffc542c332e07124'
+    },{
+      img1: 'https://k72.ca/images/caseStudies/SollioAg/thumbnailimage_SollioAg.jpg?w=1280&h=960&s=3085861fabc3a15e7f8f8a01c07afa4f',
+      img2: 'https://k72.ca/images/caseStudies/LAMAJEURE_-_Son_sur_mesure/chalaxeur-thumbnail_img.jpg?w=1280&h=960&s=1d30e394b903c242ad9a4f2cb2463cda'
+    },{
+      img1: 'https://k72.ca/images/caseStudies/Opto_Reseau_Brand/opto_thumbnail2.jpg?w=1280&h=960&s=7f23d7d824eb04c784dcf51380fe3996',
+      img2: 'https://k72.ca/images/caseStudies/BEST/BEST_site_menu_Thumbnail.jpg?w=1280&h=960&s=d3b20d81946c6a7f4a6cd7ce1cfbb0fd'
     }
   ]
 
@@ -51,7 +57,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="p-2 bg-[#1C1C1E]">
-      <h1 className="w-full pt-[20vw] text-[11svw] uppercase font-[font2] text-[#F2E9E4]"><span className="text-[#CCFF00]">Pro</span><span>jects</span></h1>
+      <h1 className="w-full pt-[20vw] text-[11svw] uppercase font-[font2] text-white"><span className="text-[#CCFF00]">Pro</span><span>jects</span><span className="absolute top-73">~</span></h1>
 
       <div className="-mt-[4vw]">
         {pictures.map((e, i) => (

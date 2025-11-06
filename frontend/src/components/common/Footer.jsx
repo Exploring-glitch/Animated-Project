@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <div className="p-5 w-full h-[15vw] bg-black text-[#EDEDED]">
+        <div className="p-5 w-full h-[15vw] bg-[#161617] text-[#EDEDED] mt-2">
             <div className="mb-[8.5vw] flex justify-between">
                 <div className="flex gap-4 p-1">
                     <button className="font-[font2] text-2xl px-6 pt-1  rounded-full border-2 hover:text-[#CCFF00] hover:border-[#CCFF00]">FB</button>

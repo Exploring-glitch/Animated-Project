@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Footer from "../components/common/Footer";
+import AgenceBottomTexts from "../components/agence/AgenceBottomTexts";
 
 
 const AgencePage = () => {
@@ -27,28 +28,28 @@ const AgencePage = () => {
     'https://k72.ca/images/teamMembers/Lawrence_480x640.jpg?w=480&h=640&fit=crop&s=0a878205586092164001a9afe0ef4007',
     'https://k72.ca/images/teamMembers/MEGGIE_480X640_2.jpg?w=480&h=640&fit=crop&s=3604b19f8fc7b40f517954147698d847',
     'https://k72.ca/images/teamMembers/joel_480X640_3.jpg?w=480&h=640&fit=crop&s=1cadbf143b3aa916b1b414464acbb4d6'
-  ] 
+  ]
 
-  useGSAP(function(){
+  useGSAP(function () {
     gsap.to(imgDivRef.current, {
-      scrollTrigger : {
+      scrollTrigger: {
         trigger: imgDivRef.current,
         //markers: true,
         start: 'top 23%',
         end: 'top -120%',
-        pin:true,
+        pin: true,
 
-        
-        onUpdate: function(e){
-          
+
+        onUpdate: function (e) {
+
           let imgIndex;
 
-          if(e.progress<1){ //progress starts from 0 and ends at 1 
+          if (e.progress < 1) { //progress starts from 0 and ends at 1 
             imgIndex = Math.floor(e.progress * imageArray.length) //when less than 1 do this.
-          } else{
-            imgIndex = imageArray.length-1 //when 1 do this.
+          } else {
+            imgIndex = imageArray.length - 1 //when 1 do this.
           }
-          
+
           imgRef.current.src = imageArray[imgIndex]
         }
       }
@@ -56,35 +57,22 @@ const AgencePage = () => {
   })
 
   return (
-    <div >
-      <div className="section1">
-        <div ref={imgDivRef} className="absolute h-[22vw] w-[16vw] rounded-full overflow-hidden left-[27vw] bottom-58"> {/*first give w and h to parent as you like*/}
-          <img ref={imgRef} className="h-full w-full object-cover" src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" /> {/*then make the child h and w full to parent*/}
-        </div>
-
-        <div className='relative mt-[55.5vh]'>
-          <h1 className='font-[font2] uppercase text-center text-[22vw] leading-[18vw]'>Seventy <br />Two</h1>
-
-          <div className=' pl-[44vw] font-[font2] mt-10'>
-            <p className='text-5xl'>&emsp; &emsp; &emsp; &emsp; &emsp; We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
-          </div>
-
-          <div className="font-[font2] flex justify-around w-[50vw] mt-30 ml-7">
-            <h1 className="text-xl">Expertise</h1>
-            <div>
-              <h1 className="text-xl">Strategy <br /> Advertising <br /> Branding <br /> Design <br /> Content</h1>
-            </div>
-          </div>
-
-          <div className="font-[font2] mt-40 flex gap-20 w-[75vw] ml-[10.5vw] text-lg">
-            <p className="w-1/2">Our Work_ Born in curiosity, raised by dedication and fed with a steady diet of creativity.</p>
-            <p className="w-1/2">Our Creative_ Simmering in an environment where talent can come to a full boil. Encouraged to become the best versions of ourselves.</p>
-            <p className="w-1/2">Our Culture_ We’re open to each other. Period. The team works together to create a space that makes us proud.</p>
-          </div>
-        </div>
-
-        <Footer />
+    <div className="bg-[#1C1C1E] text-[#F2E9E4]">
+      <div ref={imgDivRef} className="absolute h-[22vw] w-[16vw] rounded-full overflow-hidden left-[27vw] bottom-58"> {/*first give w and h to parent as you like*/}
+        <img ref={imgRef} className="h-full w-full object-cover" src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" /> {/*then make the child h and w full to parent*/}
       </div>
+
+      <div className='relative pt-[55vh]'>
+        <h1 className='font-[font2] uppercase text-center text-[21vw] leading-[18vw]'>Seventy <br />Two</h1>
+
+        <div className=' pl-[44vw] font-[font2] mt-10'>
+          <p className='text-5xl'>&emsp; &emsp; &emsp; &emsp; &emsp; We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
+        </div>
+
+        <AgenceBottomTexts />
+      </div>
+
+      <Footer />
     </div>
   )
 }
