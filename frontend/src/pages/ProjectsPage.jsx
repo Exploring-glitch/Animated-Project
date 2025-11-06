@@ -2,6 +2,8 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap";
 import ProjectCard from '../components/projects/ProjectCard'
 import { ScrollTrigger } from "gsap/all";
+import ProjectFooter from "../components/projects/ProjectFooter";
+
 
 const ProjectsPage = () => {
   const pictures = [
@@ -25,38 +27,45 @@ const ProjectsPage = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  useGSAP(function () {
-    gsap.from('.projectImg', {
-      height: '100px',
-      stagger: {
-        amount: 0.4
-      },
-      scrollTrigger: {
-        trigger: '.projectImgParent',
-        start: 'top 100%',
-        end: 'top -150%',
-        scrub: true
-      }
-    })
-  })
+  useGSAP(() => {
+    gsap.utils.toArray(".projectImgWrapper").forEach((wrapper, i) => {
+      const inner = wrapper.querySelector(".projectImgInner");
+      gsap.fromTo(inner,
+        { scale: 0.8, y: 100, opacity: 0 },
+        {
+          scale: 1,
+          y: 0,
+          opacity: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: wrapper,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: true,
+            // markers: true
+          }
+        }
+      );
+    });
+  });
 
-    return (
-      <div className='p-2'>
-        <div>
-          <h1 className='w-full pt-[20vw] text-[12vw] uppercase font-[font2]'>Projects</h1>
-        </div>
+  return (
+    <div className="p-2 bg-[#1C1C1E]">
+      <h1 className="w-full pt-[20vw] text-[11svw] uppercase font-[font2] text-[#F2E9E4]"><span className="text-[#CCFF00]">Pro</span><span>jects</span></h1>
 
-        <div className='-mt-[4vw] projectImgParent'>
-          {pictures.map(function (e) {
-            return (
-              <div className='projectImg w-full h-[25vw] flex gap-2 mb-2'>
-                <ProjectCard img1={e.img1} img2={e.img2} />
-              </div>
-            )
-          })}
-        </div>
+      <div className="-mt-[4vw]">
+        {pictures.map((e, i) => (
+          <div key={i} className="projectImgWrapper w-full h-[25vw] mb-2 overflow-hidden">
+            <div className="projectImgInner w-full h-full flex gap-2">
+              <ProjectCard img1={e.img1} img2={e.img2} />
+            </div>
+          </div>
+        ))}
       </div>
-    )
-  }
 
-export default ProjectsPage
+      <ProjectFooter />
+    </div>
+  );
+};
+
+export default ProjectsPage;
