@@ -57,7 +57,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="p-2 bg-[#1C1C1E]">
-      <h1 className="w-full pt-[20vw] text-[11svw] uppercase font-[font2] text-white"><span className="text-[#CCFF00]">Pro</span><span>jects</span><span className="absolute top-73">~</span></h1>
+      <h1 className="w-full md:pt-[35vw] lg:pt-[20vw] text-[11svw] uppercase font-[font2] text-white"><span className="text-[#CCFF00]">Pro</span><span>jects</span></h1>
 
       <div className="-mt-[4vw]">
         {pictures.map((e, i) => (

@@ -11,7 +11,7 @@ const FullScreenNav = () => {
 
   function gsapAnimation() {
     const tl = gsap.timeline()
-    
+
     tl.to('.fullScreenRef', {
       display: 'block'
     })
@@ -38,7 +38,7 @@ const FullScreenNav = () => {
   }
 
   function gsapAnimationReverse() {
-    
+
     const tl = gsap.timeline()
     tl.to('.link', {
       opacity: 0,
@@ -94,14 +94,14 @@ const FullScreenNav = () => {
           </div>
 
           <div onClick={() => { setNavOpen(false) }} className='relative h-20 w-20 cursor-pointer'>
-            <div className='absolute h-[7.3vw] w-[0.2vw] -rotate-45 origin-top bg-[#CCFF00]'></div>
-            <div className='absolute h-[7.3vw] w-[0.2vw] right-0 rotate-45 origin-top bg-[#CCFF00]'></div>
+            <div className='absolute h-[34vw] w-[0.4vw] lg:h-[7.3vw] lg:w-[0.2vw] -rotate-45 origin-top bg-[#CCFF00]'></div>
+            <div className='absolute h-[34vw] w-[0.4vw] lg:h-[7.3vw] lg:w-[0.2vw] right-0 rotate-45 origin-top bg-[#CCFF00]'></div>
           </div>
         </div>
 
-        <div className='py-15'>
+        <div className='py-30 lg:py-15'>
           <div className='link relative border-t-[0.1vw] text-center'>
-            <h1 className='uppercase text-[7vw] leading-0 p-12 pt-14.5'>Projects</h1>
+            <h1 className='uppercase text-[13vw] lg:text-[7vw] leading-0 py-5 pt-6 lg:p-12 lg:pt-14.5'>Projects</h1>
 
             <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
               <div className='moveX flex items-center pt-2'>
@@ -122,7 +122,7 @@ const FullScreenNav = () => {
           </div>
 
           <div className='link relative border-t-[0.1vw] text-center '>
-            <h1 className='uppercase text-[7vw] leading-0 p-12 pt-14.5'>Agence</h1>
+            <h1 className='uppercase text-[13vw] lg:text-[7vw] leading-0 py-5 pt-6 lg:p-12 lg:pt-14.5'>Agence</h1>
 
             <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
               <div className='moveX flex items-center pt-2'>
@@ -143,7 +143,7 @@ const FullScreenNav = () => {
           </div>
 
           <div className='link relative border-t-[0.1vw] text-center '>
-            <h1 className='uppercase text-[7vw] leading-0 p-12 pt-14.5'>Contact</h1>
+            <h1 className='uppercase text-[13vw] lg:text-[7vw] leading-0 py-5 pt-6 lg:p-12 lg:pt-14.5'>Contact</h1>
 
             <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
               <div className='moveX flex items-center pt-2'>
@@ -164,7 +164,7 @@ const FullScreenNav = () => {
           </div>
 
           <div className='link relative border-y-[0.1vw] text-center '>
-            <h1 className='uppercase text-[7vw] leading-0 p-12 pt-14.5'>Blogue</h1>
+            <h1 className='uppercase text-[13vw] lg:text-[7vw] leading-0 py-5 pt-6 lg:p-12 lg:pt-14.5'>Blogue</h1>
 
             <div className='move_link absolute top-0 flex bg-[#CCFF00] text-black h-full'>
               <div className='moveX flex items-center pt-2'>
@@ -185,11 +185,21 @@ const FullScreenNav = () => {
           </div>
         </div>
 
-        <div className='flex justify-center mt-15 gap-3 uppercase font-[font1] '>
-          <h6 className='text-xs hover:text-[#CCFF00] hover:duration-100'>Privacy Policy</h6>
-          <h6 className='text-xs hover:text-[#CCFF00] hover:duration-100'>Privacy Notice</h6>
-          <h6 className='text-xs hover:text-[#CCFF00] hover:duration-100'>Ethics Report</h6>
-          <h6 className='text-xs hover:text-[#CCFF00] hover:duration-100'>Concent Options</h6>
+        
+        <div className='lg:flex lg:justify-between p-1 -mt-10'>
+          <div className='ml-24 lg:flex lg:justify-center lg:mt-15 lg:gap-4 uppercase font-[font1]'>
+            <h6 className='text-xs hover:text-[#CCFF00] hover:duration-100'>Privacy Policy</h6>
+            <h6 className='text-xs hover:text-[#CCFF00] hover:duration-100'>Privacy Notice</h6>
+            <h6 className='text-xs hover:text-[#CCFF00] hover:duration-100'>Ethics Report</h6>
+            <h6 className='text-xs hover:text-[#CCFF00] hover:duration-100'>Concent Options</h6>
+          </div>
+
+          <div className="mx-5 flex mt-2 gap-1 lg:gap-3 lg:h-[2.7vw] lg:mt-9">
+            <button className="font-[font2] text-2xl px-4 lg:px-6 pt-1 rounded-full border-2 hover:text-[#CCFF00] hover:border-[#CCFF00]">FB</button>
+            <button className="font-[font2] text-2xl px-4 lg:px-6 pt-1 rounded-full border-2 hover:text-[#CCFF00] hover:border-[#CCFF00]">IG</button>
+            <button className="font-[font2] text-2xl px-4 lg:px-6 pt-1 rounded-full border-2 hover:text-[#CCFF00] hover:border-[#CCFF00]">IN</button>
+            <button className="font-[font2] text-2xl px-4 lg:px-6 pt-1 rounded-full border-2 hover:text-[#CCFF00] hover:border-[#CCFF00]">BE</button>
+          </div>
         </div>
       </div>
     </div>
