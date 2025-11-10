@@ -84,7 +84,7 @@ const FullScreenNav = () => {
           <div className='stairAnimate h-full w-1/5 bg-black'></div>
         </div>
       </div>
-
+      
       <div className='relative p-2'>
         <div className='navbarTopLink flex justify-between'>
           <div>
