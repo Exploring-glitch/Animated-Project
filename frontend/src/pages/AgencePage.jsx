@@ -57,7 +57,7 @@ const AgencePage = () => {
   })
 
   return (
-    <div className="bg-[#1C1C1E] text-[#F2E9E4]">
+    <div className="bg-[#1C1C1E] text-[#ffffff]">
       <div ref={imgDivRef} className="absolute h-[22vw] w-[16vw] rounded-full overflow-hidden left-[27vw] bottom-58"> {/*first give w and h to parent as you like*/}
         <img ref={imgRef} className="h-full w-full object-cover" src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" /> {/*then make the child h and w full to parent*/}
       </div>
