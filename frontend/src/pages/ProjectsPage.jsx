@@ -19,13 +19,13 @@ const ProjectsPage = () => {
     }, {
       img1: 'https://k72.ca/images/caseStudies/FRUITE/Fruite_thumbnail_bbq.jpg?w=1280&h=960&s=953c1f702bec28d66d07e95bc1261821',
       img2: 'https://k72.ca/images/caseStudies/PME-MTL/PME-MTL_Thumbnail.jpg?w=1280&h=960&s=49e3b251d0a28f1f8d40fd59517fc000'
-    },{
+    }, {
       img1: 'https://k72.ca/images/caseStudies/OKA/OKA_thumbnail.jpg?w=1280&h=960&s=c12c27c9db3c521e4c82a246a8d5c022',
       img2: 'https://k72.ca/images/caseStudies/CRISIS24/crisis24_behance_1920X1200_cartes.jpg?w=1280&h=960&s=bb42c9de87442e1bffc542c332e07124'
-    },{
+    }, {
       img1: 'https://k72.ca/images/caseStudies/SollioAg/thumbnailimage_SollioAg.jpg?w=1280&h=960&s=3085861fabc3a15e7f8f8a01c07afa4f',
       img2: 'https://k72.ca/images/caseStudies/LAMAJEURE_-_Son_sur_mesure/chalaxeur-thumbnail_img.jpg?w=1280&h=960&s=1d30e394b903c242ad9a4f2cb2463cda'
-    },{
+    }, {
       img1: 'https://k72.ca/images/caseStudies/Opto_Reseau_Brand/opto_thumbnail2.jpg?w=1280&h=960&s=7f23d7d824eb04c784dcf51380fe3996',
       img2: 'https://k72.ca/images/caseStudies/BEST/BEST_site_menu_Thumbnail.jpg?w=1280&h=960&s=d3b20d81946c6a7f4a6cd7ce1cfbb0fd'
     }
@@ -56,22 +56,27 @@ const ProjectsPage = () => {
   });
 
   return (
-    <div className="bg-[#1C1C1E] text-white min-h-screen w-screen overflow-x-hidden">
-      <h1 className="w-full pt-70 md:pt-[35vw] lg:pt-[20vw] text-[11svw] uppercase font-[font2]"><span className="text-[#CCFF00]">Pro</span><span>jects</span></h1>
+    <div className="bg-[#1C1C1E] text-white min-h-screen w-full overflow-x-hidden">
+      <h1 className="w-full pt-[30vh] md:pt-[35vw] lg:pt-[20vw] text-[12vw] md:text-[8vw] lg:text-[6vw] uppercase font-[font2]">
+        <span className="text-[#CCFF00]">Pro</span>
+        <span>jects</span>
+      </h1>
 
-      <div className="-mt-[4vw]">
+      <div className="pt-4 -mt-[4vw]">
         {pictures.map((e, i) => (
-          <div key={i} className="projectImgWrapper w-full h-[25vw] mb-2 overflow-hidden">
-            <div className="projectImgInner w-full h-full flex gap-2">
+          <div key={i} className="projectImgWrapper w-full h-[55vw] md:h-[35vw] lg:h-[25vw] mb-2 overflow-hidden">
+            <div className="projectImgInner w-full h-full flex flex-col md:flex-row gap-2 bg-amber-700">
               <ProjectCard img1={e.img1} img2={e.img2} />
             </div>
           </div>
         ))}
       </div>
 
+
       <Footer />
     </div>
   );
+
 };
 
 export default ProjectsPage;
