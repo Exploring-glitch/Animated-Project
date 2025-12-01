@@ -57,16 +57,65 @@ const AgencePage = () => {
   })
 
   return (
-    <div className="bg-[#1C1C1E] text-[#ffffff]">
-      <div ref={imgDivRef} className="absolute h-[22vw] w-[16vw] rounded-full overflow-hidden left-[27vw] bottom-58"> {/*first give w and h to parent as you like*/}
-        <img ref={imgRef} className="h-full w-full object-cover" src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" /> {/*then make the child h and w full to parent*/}
+    <div className="bg-[#1e1e20] text-[#ffffff]">
+
+      {/* IMAGE — responsive position + size */}
+      <div
+        ref={imgDivRef}
+        className="
+        absolute 
+        h-[45vw] w-[32vw] sm:h-[30vw] sm:w-[22vw] 
+        md:h-[22vw] md:w-[16vw]
+        rounded-full overflow-hidden
+        left-[5vw] bottom-[10vh]
+        sm:left-[20vw] sm:bottom-[20vh]
+        md:left-[27vw] md:bottom-58
+      "
+      >
+        <img
+          ref={imgRef}
+          className="h-full w-full object-cover"
+          src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7"
+          alt=""
+        />
       </div>
 
-      <div className='relative pt-[55vh]'>
-        <h1 className='font-[font2] uppercase text-center text-[21vw] leading-[18vw]'>Seventy <br />Two</h1>
+      <div className="relative pt-[60vh] sm:pt-[70vh] md:pt-[55vh]">
 
-        <div className=' pl-[44vw] font-[font2] mt-10'>
-          <p className='text-5xl'>&emsp; &emsp; &emsp; &emsp; &emsp; We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
+        {/* TITLE — responsive font sizes */}
+        <h1
+          className="
+          font-[font2] uppercase text-center 
+          text-[28vw] leading-[24vw]
+          sm:text-[22vw] sm:leading-[20vw]
+          md:text-[21vw] md:leading-[18vw]
+        "
+        >
+          Seventy <br /> Two
+        </h1>
+
+        {/* PARAGRAPH — responsive width + padding */}
+        <div
+          className="
+          pl-[5vw] pr-[5vw]
+          sm:pl-[20vw] sm:pr-[10vw]
+          md:pl-[44vw] md:pr-0
+          font-[font2] mt-10
+        "
+        >
+          <p
+            className="
+            text-xl leading-[6vw]
+            sm:text-3xl sm:leading-[4vw]
+            md:text-5xl md:leading-normal
+          "
+          >
+            &emsp; &emsp; &emsp; &emsp; &emsp;
+            We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner.
+            A brand is a living thing, with values, a personality and a story.
+            If we ignore that, we can achieve short-term success, but not influence that goes the distance.
+            We bring that perspective to every brand story we help tell.
+          </p>
         </div>
 
         <AgenceBottomTexts />
@@ -74,7 +123,8 @@ const AgencePage = () => {
 
       <Footer />
     </div>
-  )
+  );
+
 }
 
 export default AgencePage
