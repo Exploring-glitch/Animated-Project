@@ -64,8 +64,8 @@ const ProjectsPage = () => {
 
       <div className="pt-4 -mt-[4vw]">
         {pictures.map((e, i) => (
-          <div key={i} className="projectImgWrapper w-full h-[55vw] md:h-[35vw] lg:h-[25vw] mb-2 overflow-hidden">
-            <div className="projectImgInner w-full h-full flex flex-col md:flex-row gap-2 bg-amber-700">
+          <div key={i} className="projectImgWrapper w-full h-[100vw] md:h-[35vw] lg:h-[25vw] mb-2 overflow-hidden">
+            <div className="projectImgInner w-full h-full flex flex-col md:flex-row gap-2">
               <ProjectCard img1={e.img1} img2={e.img2} />
             </div>
           </div>
