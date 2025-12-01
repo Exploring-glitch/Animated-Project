@@ -58,57 +58,22 @@ const AgencePage = () => {
 
   return (
     <div className="bg-[#1e1e20] text-[#ffffff]">
-
-      {/* IMAGE — responsive position + size */}
-      <div
-        ref={imgDivRef}
-        className="
-        absolute 
-        h-[45vw] w-[32vw] sm:h-[30vw] sm:w-[22vw] 
-        md:h-[22vw] md:w-[16vw]
-        rounded-full overflow-hidden
-        left-[5vw] bottom-[10vh]
-        sm:left-[20vw] sm:bottom-[20vh]
-        md:left-[27vw] md:bottom-58
-      "
-      >
+      <div ref={imgDivRef} className="absolute h-[45vw] w-[32vw] rounded-full overflow-hidden left-[5vw] bottom-[60vh] sm:left-[20vw] md:left-[27vw] lg:bottom-58">
         <img
           ref={imgRef}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover "
           src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7"
           alt=""
         />
       </div>
 
-      <div className="relative pt-[60vh] sm:pt-[70vh] md:pt-[55vh]">
-
-        {/* TITLE — responsive font sizes */}
-        <h1
-          className="
-          font-[font2] uppercase text-center 
-          text-[28vw] leading-[24vw]
-          sm:text-[22vw] sm:leading-[20vw]
-          md:text-[21vw] md:leading-[18vw]
-        "
-        >
+      <div className="relative pt-[30vh] md:pt-[55vh]">
+        <h1 className="font-[font2] uppercase text-center text-[20vw] leading-[20vw] sm:text-[22vw] sm:leading-[20vw] md:text-[21vw] md:leading-[18vw]">
           Seventy <br /> Two
         </h1>
 
-        {/* PARAGRAPH — responsive width + padding */}
-        <div
-          className="
-          pl-[5vw] pr-[5vw]
-          sm:pl-[20vw] sm:pr-[10vw]
-          md:pl-[44vw] md:pr-0
-          font-[font2] mt-10
-        "
-        >
-          <p
-            className="
-            text-xl leading-[6vw]
-            sm:text-3xl sm:leading-[4vw]
-            md:text-5xl md:leading-normal
-          "
+        <div className="pl-[5vw] pr-[5vw] sm:pl-[20vw] sm:pr-[10vw] md:pl-[44vw] md:pr-0 font-[font2] mt-10">
+          <p className="text-xl leading-[6vw] sm:text-3xl sm:leading-[4vw] md:text-5xl md:leading-normal"
           >
             &emsp; &emsp; &emsp; &emsp; &emsp;
             We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner.
