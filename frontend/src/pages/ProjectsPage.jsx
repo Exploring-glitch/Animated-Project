@@ -56,13 +56,13 @@ const ProjectsPage = () => {
   });
 
   return (
-    <div className="bg-[#1C1C1E] text-white min-h-screen w-full overflow-x-hidden">
-      <h1 className="w-full pt-[30vh] md:pt-[35vw] lg:pt-[20vw] text-[12vw] md:text-[8vw] lg:text-[6vw] uppercase font-[font2]">
+    <div className="bg-[#1e1e20] text-white min-h-screen w-full overflow-x-hidden">
+      <h1 className="w-full ml-5 pt-[30vh] md:pt-[60vw] lg:pt-[23vw] text-[12vw] md:text-[16vw] lg:text-[9vw] uppercase font-[font2]">
         <span className="text-[#CCFF00]">Pro</span>
         <span>jects</span>
       </h1>
 
-      <div className="pt-4 -mt-[4vw]">
+      <div className="pt-4 -mt-[5vw]">
         {pictures.map((e, i) => (
           <div key={i} className="projectImgWrapper w-full h-[100vw] md:h-[35vw] lg:h-[25vw] mb-2 overflow-hidden">
             <div className="projectImgInner w-full h-full flex flex-col md:flex-row gap-2">
