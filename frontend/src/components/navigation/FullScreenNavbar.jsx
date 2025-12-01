@@ -74,7 +74,7 @@ const FullScreenNav = () => {
 
 
   return (
-    <div className='fullScreenRef hidden h-screen w-screen text-white overflow-hidden font-[font2] z-50 fixed'>
+    <div className='fullScreenRef hidden h-screen w-screen text-white overflow-hidden font-[font2] z-50 fixed overflow-x-hidden'>
       <div className='h-screen w-screen fixed'>
         <div className='h-full w-full flex'>
           <div className='stairAnimate h-full w-1/5 bg-black'></div>

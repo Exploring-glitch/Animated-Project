@@ -56,7 +56,7 @@ const ProjectsPage = () => {
   });
 
   return (
-    <div className="bg-[#1C1C1E] text-white h-screen w-screen">
+    <div className="bg-[#1C1C1E] text-white min-h-screen w-screen overflow-x-hidden">
       <h1 className="w-full pt-70 md:pt-[35vw] lg:pt-[20vw] text-[11svw] uppercase font-[font2]"><span className="text-[#CCFF00]">Pro</span><span>jects</span></h1>
 
       <div className="-mt-[4vw]">
